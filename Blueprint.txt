@@ -1,1 +1,107 @@
+MODULE -- CRM
 
+interface Admin {
+    public function listCustomers(): array;
+    public function addCustomer(Customer $customer): void;
+    public function updateCustomer(Customer $customer): void;
+    public function deleteCustomer(int $id): void;
+
+    public function listCustomerSites(): array;
+    public function addCustomerSite(CustomerSite $site): void;
+    public function updateCustomerSite(CustomerSite $site): void;
+    public function deleteCustomerSite(int $id): void;
+
+    public function listBannedCustomers(): array;
+    public function banCustomer(int $id): void;
+    public function liftBannedCustomer(int $id): void;
+
+    public function listCreditApplications(): array;
+    public function addCreditApplication(CreditApplication $application): void;
+    public function updateCreditApplication(CreditApplication $application): void;
+    public function deleteCreditApplication(int $id): void;
+
+    public function listVehicles(): array;
+    public function addVehicle(Vehicle $vehicle): void;
+    public function updateVehicle(Vehicle $vehicle): void;
+    public function deleteVehicle(int $id): void;
+
+    public function listLocationFares(): array;
+    public function addLocationFare(LocationFare $fare): void;
+    public function updateLocationFare(LocationFare $fare): void;
+    public function deleteLocationFare(int $id): void;
+}
+
+MODULE -- PRODUCTION
+
+interface Product {
+
+    public function listItems(): array;
+    public function addItem(Item $item): void;
+    public function updateItem(Item $item): void;
+    public function deleteItem(int $id): void;
+
+    public function listProductions(): array;
+    public function addProduction(Production $production): void;
+    public function updateProduction(Production $production): void;
+    public function deleteProduction(int $id): void;
+
+    public function listLots(): array;
+    public function addLot(Lot $lot): void;
+    public function updateLot(Lot $lot): void;
+    public function deleteLot(int $id): void;
+}
+
+MODULE -- PURCHASE
+
+interface Purchase {
+
+    public function listQuotations(): array;
+    public function addQuotation(Quotation $quotation): void;
+    public function updateQuotation(Quotation $quotation): void;
+    public function deleteQuotation(int $id): void;
+
+    public function listPurchaseOrders(): array;
+    public function addPurchaseOrder(Purchase $purchase): void;
+    public function updatePurchaseOrder(Purchase $purchase): void;
+    public function deletePurchaseOrder(int $id): void;
+
+    public function listDeliveryNotes(): array;
+    public function addDeliveryNote(Deliver $delivery): void;
+    public function updateDeliveryNote(Deliver $delivery): void;
+    public function deleteDeliveryNote(int $id): void;
+
+    public function listStockReturns(): array;
+    public function addStockReturn(Return $return): void;
+    public function updateStockReturn(Return $return): void;
+    public function deleteStockReturn(int $id): void;
+}
+
+MODULE -- SALE 
+
+interface Sale {
+
+    public function listInvoices(): array;
+    public function addInvoice(Invoice $invoice): void;
+    public function updateInvoice(Invoice $invoice): void;
+    public function deleteInvoice(int $id): void;
+
+    public function listReceipts(): array;
+    public function addReceipt(Receipt $receipt): void;
+    public function updateReceipt(Receipt $receipt): void;
+    public function deleteReceipt(int $id): void;
+
+    public function listCreditNotes(): array;
+    public function addCreditNote(Creditnote $creditnote): void;
+    public function updateCreditNote(Creditnote $creditnote): void;
+    public function deleteCreditNote(int $id): void;
+
+    public function listRefunds(): array;
+    public function addRefund(Refund $refund): void;
+    public function updateRefund(Refund $refund): void;
+    public function deleteRefund(int $id): void;
+
+    public function listMiscellaniousIncomes(): array;
+    public function addMiscellaniousIncome(MiscellaniousIncome $miscellaniousincome): void;
+    public function updateMiscellaniousIncome(MiscellaniousIncome $miscellaniousincome): void;
+    public function deleteMiscellaniousIncome(int $id): void;
+}
